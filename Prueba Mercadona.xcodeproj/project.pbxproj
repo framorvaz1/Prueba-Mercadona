@@ -17,6 +17,8 @@
 		A42F72362972C688001226C3 /* Prueba_MercadonaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F72352972C688001226C3 /* Prueba_MercadonaTests.swift */; };
 		A42F72402972C688001226C3 /* Prueba_MercadonaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F723F2972C688001226C3 /* Prueba_MercadonaUITests.swift */; };
 		A42F72422972C688001226C3 /* Prueba_MercadonaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F72412972C688001226C3 /* Prueba_MercadonaUITestsLaunchTests.swift */; };
+		A4F460CB29730E5400051029 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F460C929730E5400051029 /* CharacterCell.swift */; };
+		A4F460CF297311B500051029 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F460CE297311B500051029 /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		A42F723B2972C688001226C3 /* Prueba MercadonaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Prueba MercadonaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A42F723F2972C688001226C3 /* Prueba_MercadonaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prueba_MercadonaUITests.swift; sourceTree = "<group>"; };
 		A42F72412972C688001226C3 /* Prueba_MercadonaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prueba_MercadonaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A4F460C929730E5400051029 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		A4F460CE297311B500051029 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,7 @@
 		A482A5442972CEF1002E6154 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A4F460CD2973119D00051029 /* Extensions */,
 				A482A54A2972CFB6002E6154 /* Application */,
 				A482A5492972CFAA002E6154 /* Resources */,
 			);
@@ -196,10 +201,27 @@
 		A482A54C2972D00E002E6154 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				A4F460C829730E1800051029 /* Cell */,
 				A42F721F2972C687001226C3 /* MainViewController.swift */,
 				A42F72212972C687001226C3 /* Main.storyboard */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		A4F460C829730E1800051029 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A4F460C929730E5400051029 /* CharacterCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A4F460CD2973119D00051029 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A4F460CE297311B500051029 /* UIViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,9 +355,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4F460CF297311B500051029 /* UIViewExtension.swift in Sources */,
 				A42F72202972C687001226C3 /* MainViewController.swift in Sources */,
 				A42F72262972C687001226C3 /* Prueba_Mercadona.xcdatamodeld in Sources */,
 				A42F721C2972C687001226C3 /* AppDelegate.swift in Sources */,
+				A4F460CB29730E5400051029 /* CharacterCell.swift in Sources */,
 				A42F721E2972C687001226C3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
