@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		A42F721C2972C687001226C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F721B2972C687001226C3 /* AppDelegate.swift */; };
 		A42F721E2972C687001226C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F721D2972C687001226C3 /* SceneDelegate.swift */; };
-		A42F72202972C687001226C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F721F2972C687001226C3 /* ViewController.swift */; };
+		A42F72202972C687001226C3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F721F2972C687001226C3 /* MainViewController.swift */; };
 		A42F72232972C687001226C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A42F72212972C687001226C3 /* Main.storyboard */; };
 		A42F72262972C687001226C3 /* Prueba_Mercadona.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A42F72242972C687001226C3 /* Prueba_Mercadona.xcdatamodeld */; };
 		A42F72282972C688001226C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A42F72272972C688001226C3 /* Assets.xcassets */; };
@@ -40,7 +40,7 @@
 		A42F72182972C687001226C3 /* Prueba Mercadona.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prueba Mercadona.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A42F721B2972C687001226C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A42F721D2972C687001226C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A42F721F2972C687001226C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A42F721F2972C687001226C3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A42F72222972C687001226C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A42F72252972C687001226C3 /* Prueba_Mercadona.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Prueba_Mercadona.xcdatamodel; sourceTree = "<group>"; };
 		A42F72272972C688001226C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -196,7 +196,7 @@
 		A482A54C2972D00E002E6154 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				A42F721F2972C687001226C3 /* ViewController.swift */,
+				A42F721F2972C687001226C3 /* MainViewController.swift */,
 				A42F72212972C687001226C3 /* Main.storyboard */,
 			);
 			path = Main;
@@ -333,7 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A42F72202972C687001226C3 /* ViewController.swift in Sources */,
+				A42F72202972C687001226C3 /* MainViewController.swift in Sources */,
 				A42F72262972C687001226C3 /* Prueba_Mercadona.xcdatamodeld in Sources */,
 				A42F721C2972C687001226C3 /* AppDelegate.swift in Sources */,
 				A42F721E2972C687001226C3 /* SceneDelegate.swift in Sources */,
@@ -515,9 +515,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N9F6X85SP8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Prueba Mercadona/Info.plist";
+				INFOPLIST_FILE = "Prueba Mercadona/Supporting/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Rick and Morty";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -544,9 +545,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N9F6X85SP8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Prueba Mercadona/Info.plist";
+				INFOPLIST_FILE = "Prueba Mercadona/Supporting/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Rick and Morty";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
