@@ -101,14 +101,10 @@
 		A42F721A2972C687001226C3 /* Prueba Mercadona */ = {
 			isa = PBXGroup;
 			children = (
-				A42F721B2972C687001226C3 /* AppDelegate.swift */,
-				A42F721D2972C687001226C3 /* SceneDelegate.swift */,
-				A42F721F2972C687001226C3 /* ViewController.swift */,
-				A42F72212972C687001226C3 /* Main.storyboard */,
-				A42F72272972C688001226C3 /* Assets.xcassets */,
-				A42F72292972C688001226C3 /* LaunchScreen.storyboard */,
-				A42F722C2972C688001226C3 /* Info.plist */,
-				A42F72242972C687001226C3 /* Prueba_Mercadona.xcdatamodeld */,
+				A482A5432972CEE7002E6154 /* Presentation */,
+				A482A5462972CF22002E6154 /* Domain */,
+				A482A5472972CF3D002E6154 /* Data */,
+				A482A5482972CF5A002E6154 /* Supporting */,
 			);
 			path = "Prueba Mercadona";
 			sourceTree = "<group>";
@@ -128,6 +124,82 @@
 				A42F72412972C688001226C3 /* Prueba_MercadonaUITestsLaunchTests.swift */,
 			);
 			path = "Prueba MercadonaUITests";
+			sourceTree = "<group>";
+		};
+		A482A5432972CEE7002E6154 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A482A5442972CEF1002E6154 /* Common */,
+				A482A5452972CF00002E6154 /* Modules */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A482A5442972CEF1002E6154 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A482A54A2972CFB6002E6154 /* Application */,
+				A482A5492972CFAA002E6154 /* Resources */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A482A5452972CF00002E6154 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A482A54C2972D00E002E6154 /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A482A5462972CF22002E6154 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A482A5472972CF3D002E6154 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A482A5482972CF5A002E6154 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				A42F72292972C688001226C3 /* LaunchScreen.storyboard */,
+				A42F722C2972C688001226C3 /* Info.plist */,
+				A42F72242972C687001226C3 /* Prueba_Mercadona.xcdatamodeld */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		A482A5492972CFAA002E6154 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A42F72272972C688001226C3 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A482A54A2972CFB6002E6154 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A42F721D2972C687001226C3 /* SceneDelegate.swift */,
+				A42F721B2972C687001226C3 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A482A54C2972D00E002E6154 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A42F721F2972C687001226C3 /* ViewController.swift */,
+				A42F72212972C687001226C3 /* Main.storyboard */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
