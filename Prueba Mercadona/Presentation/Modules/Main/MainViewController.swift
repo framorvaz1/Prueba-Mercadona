@@ -9,9 +9,15 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    // MARK: - IBOutlets
+
     @IBOutlet weak var tableView: UITableView!
 
+    // MARK: - Properties
+
     private var charactersList: [String] = ["Rick", "Morty", "Fran", "Rubio", "Fernando"]
+
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,10 +25,15 @@ class MainViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
 
+        setupNavigationBar()
+    }
+
+    // MARK: - Private functions
+
+    private func setupNavigationBar() {
         navigationItem.title = "Listado de personajes"
         let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
-
     }
 }
 
@@ -43,6 +54,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.navigationController?.pushViewController(DetailViewController(characterID: indexPath.row + 1, characterName: charactersList[indexPath.row]), animated: true)
+    }
+
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
@@ -55,7 +70,5 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
            self.tableView.endUpdates()
         }
     }
-
-
 }
 

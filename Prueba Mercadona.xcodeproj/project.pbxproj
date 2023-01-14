@@ -19,6 +19,10 @@
 		A42F72422972C688001226C3 /* Prueba_MercadonaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F72412972C688001226C3 /* Prueba_MercadonaUITestsLaunchTests.swift */; };
 		A4F460CB29730E5400051029 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F460C929730E5400051029 /* CharacterCell.swift */; };
 		A4F460CF297311B500051029 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F460CE297311B500051029 /* UIViewExtension.swift */; };
+		A4F460D229731DD800051029 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F460D129731DD800051029 /* DetailViewController.swift */; };
+		A4F460D62973248500051029 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4F460D52973248500051029 /* DetailViewController.xib */; };
+		A4F460D829732D0200051029 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F460D729732D0200051029 /* UITextFieldExtension.swift */; };
+		A4F460DA29732E8300051029 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F460D929732E8300051029 /* UIButtonExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		A42F72412972C688001226C3 /* Prueba_MercadonaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prueba_MercadonaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A4F460C929730E5400051029 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
 		A4F460CE297311B500051029 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		A4F460D129731DD800051029 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A4F460D52973248500051029 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		A4F460D729732D0200051029 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		A4F460D929732E8300051029 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				A482A54C2972D00E002E6154 /* Main */,
+				A4F460D029731A0900051029 /* Detail */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -220,8 +229,19 @@
 			isa = PBXGroup;
 			children = (
 				A4F460CE297311B500051029 /* UIViewExtension.swift */,
+				A4F460D729732D0200051029 /* UITextFieldExtension.swift */,
+				A4F460D929732E8300051029 /* UIButtonExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A4F460D029731A0900051029 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				A4F460D129731DD800051029 /* DetailViewController.swift */,
+				A4F460D52973248500051029 /* DetailViewController.xib */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A42F722B2972C688001226C3 /* LaunchScreen.storyboard in Resources */,
+				A4F460D62973248500051029 /* DetailViewController.xib in Resources */,
 				A42F72282972C688001226C3 /* Assets.xcassets in Resources */,
 				A42F72232972C687001226C3 /* Main.storyboard in Resources */,
 			);
@@ -356,11 +377,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4F460CF297311B500051029 /* UIViewExtension.swift in Sources */,
+				A4F460D829732D0200051029 /* UITextFieldExtension.swift in Sources */,
 				A42F72202972C687001226C3 /* MainViewController.swift in Sources */,
 				A42F72262972C687001226C3 /* Prueba_Mercadona.xcdatamodeld in Sources */,
 				A42F721C2972C687001226C3 /* AppDelegate.swift in Sources */,
+				A4F460DA29732E8300051029 /* UIButtonExtension.swift in Sources */,
 				A4F460CB29730E5400051029 /* CharacterCell.swift in Sources */,
 				A42F721E2972C687001226C3 /* SceneDelegate.swift in Sources */,
+				A4F460D229731DD800051029 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
