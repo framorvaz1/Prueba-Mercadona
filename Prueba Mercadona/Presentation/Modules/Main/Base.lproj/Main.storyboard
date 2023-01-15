@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rcj-Es-nXI">
-                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="735"/>
                                 <color key="backgroundColor" name="BackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CharacterCell" rowHeight="84" id="1L5-Go-UYT" customClass="CharacterCell" customModule="Prueba_Mercadona" customModuleProvider="target">
@@ -56,7 +55,7 @@
                                                 </stackView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zc2-0c-DuF">
                                                     <rect key="frame" x="15" y="82" width="384" height="1"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <color key="backgroundColor" name="White"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="yMl-jl-kuf"/>
                                                     </constraints>
@@ -77,18 +76,28 @@
                                         <color key="backgroundColor" name="BackgroundColor"/>
                                         <connections>
                                             <outlet property="characterID" destination="pHv-0y-fYB" id="fcI-di-q3K"/>
+                                            <outlet property="characterImage" destination="kuG-sH-njz" id="taB-4J-CAk"/>
                                             <outlet property="characterName" destination="UDe-fJ-bsH" id="LtE-zX-Lse"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* Deslice hacia la izquierda para eliminar una celda" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1u9-mX-hdq">
+                                <rect key="frame" x="54" y="835" width="306.5" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" name="White"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="rcj-Es-nXI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1rh-Es-ymo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rcj-Es-nXI" secondAttribute="bottom" id="AOe-2k-icH"/>
+                            <constraint firstItem="1u9-mX-hdq" firstAttribute="top" secondItem="rcj-Es-nXI" secondAttribute="bottom" constant="8" symbolic="YES" id="7Gm-LU-qaX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rcj-Es-nXI" secondAttribute="bottom" constant="35" id="AOe-2k-icH"/>
+                            <constraint firstItem="1u9-mX-hdq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AQa-ZT-5ap"/>
                             <constraint firstItem="rcj-Es-nXI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="J5h-9q-kJE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1u9-mX-hdq" secondAttribute="bottom" constant="5" id="Xlz-nI-HIu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rcj-Es-nXI" secondAttribute="trailing" id="ce6-Bh-omK"/>
                         </constraints>
                     </view>
@@ -126,8 +135,5 @@
         <namedColor name="White">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

@@ -16,7 +16,7 @@ final class CharactersAPI {
 
     // MARK: - Functions
 
-    func fetchCharactersList(onCompletion: @escaping ([Character]) -> ()) {
+    func fetchCharactersList(onCompletion: @escaping ([CharacterDomainModel]) -> ()) {
         let urlString = "https://rickandmortyapi.com/api/character"
         let url = URL(string: urlString)!
 
@@ -29,7 +29,9 @@ final class CharactersAPI {
                 print("couldn't decode json")
                 return
             }
-            onCompletion(charactersList.results)
+            onCompletion(charactersList.results.map({ character in
+                character.parseToDomainModel()
+            }))
         }
 
         task.resume()
