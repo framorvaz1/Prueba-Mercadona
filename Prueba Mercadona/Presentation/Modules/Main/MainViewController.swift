@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
 
     // MARK: - Properties
 
-    private var charactersList: [Character] = []
+    private var charactersList: [CharacterDomainModel] = []
 
     // MARK: - Lifecycle
 
@@ -61,14 +61,22 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         if let cell = tableView.dequeueReusableCell(withIdentifier: CharacterCell.identifier, for: indexPath) as? CharacterCell {
-            cell.bind(characterID: charactersList[indexPath.row].id, characterName: charactersList[indexPath.row].name)
+            cell.bind(characterImageURL: charactersList[indexPath.row].image,
+                      characterID: charactersList[indexPath.row].id,
+                      characterName: charactersList[indexPath.row].name)
             return cell
         }
             return UITableViewCell()
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.navigationController?.pushViewController(DetailViewController(characterID: charactersList[indexPath.row].id, characterName: charactersList[indexPath.row].name), animated: true)
+        self.navigationController?.pushViewController(DetailViewController(characterImageURL: charactersList[indexPath.row].image,
+                                                                           characterID: charactersList[indexPath.row].id,
+                                                                           characterName: charactersList[indexPath.row].name,
+                                                                           characterStatus: charactersList[indexPath.row].status,
+                                                                           characterSpecie: charactersList[indexPath.row].species,
+                                                                           characterGender: charactersList[indexPath.row].gender),
+                                                      animated: true)
     }
 
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

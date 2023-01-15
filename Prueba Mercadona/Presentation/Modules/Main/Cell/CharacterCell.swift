@@ -11,12 +11,15 @@ class CharacterCell: UITableViewCell {
 
     // MARK: - IBOutlets
 
+    @IBOutlet weak var characterImage: UIImageView!
     @IBOutlet weak var characterID: UILabel!
     @IBOutlet weak var characterName: UILabel!
 
     // MARK: - Public functions
 
-    func bind(characterID: Int, characterName: String) {
+    func bind(characterImageURL: String, characterID: Int, characterName: String) {
+        self.characterImage.downloaded(from: characterImageURL)
+        self.characterImage.round()
         self.characterID.text = "Personaje nº \(characterID)"
         self.characterName.text = characterName
     }
