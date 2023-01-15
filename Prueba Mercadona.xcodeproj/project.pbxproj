@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A411D2962974737200AC65A5 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = A411D2952974737200AC65A5 /* Database.swift */; };
 		A42F721C2972C687001226C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F721B2972C687001226C3 /* AppDelegate.swift */; };
 		A42F721E2972C687001226C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F721D2972C687001226C3 /* SceneDelegate.swift */; };
 		A42F72202972C687001226C3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F721F2972C687001226C3 /* MainViewController.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A411D2952974737200AC65A5 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		A42F72182972C687001226C3 /* Prueba Mercadona.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prueba Mercadona.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A42F721B2972C687001226C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A42F721D2972C687001226C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A411D2942974734800AC65A5 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				A411D2952974737200AC65A5 /* Database.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		A42F720F2972C687001226C3 = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +168,7 @@
 		A482A5442972CEF1002E6154 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A411D2942974734800AC65A5 /* Database */,
 				A4F460CD2973119D00051029 /* Extensions */,
 				A482A54A2972CFB6002E6154 /* Application */,
 				A482A5492972CFAA002E6154 /* Resources */,
@@ -424,6 +435,7 @@
 				A42F721E2972C687001226C3 /* SceneDelegate.swift in Sources */,
 				A4F460D229731DD800051029 /* DetailViewController.swift in Sources */,
 				A4DCF8A1297411090089F219 /* CharactersDataModel.swift in Sources */,
+				A411D2962974737200AC65A5 /* Database.swift in Sources */,
 				A4DCF8A9297430950089F219 /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

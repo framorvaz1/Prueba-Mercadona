@@ -25,6 +25,7 @@ class MainViewController: UIViewController {
         setUp()
         setupNavigationBar()
         requestCharactersList()
+        loadTable()
     }
 
     // MARK: - Private functions
@@ -43,10 +44,23 @@ class MainViewController: UIViewController {
     private func requestCharactersList() {
         CharactersAPI.shared.fetchCharactersList(onCompletion: { characters in
             DispatchQueue.main.async {
-                self.charactersList = characters
-                self.tableView.reloadData()
+                _ = characters.map { character in
+                    Database.shared.save(character: character)
+                }
             }
         })
+    }
+
+    private func loadTable() {
+        _ = Database.shared.read().map { characterDataBase in
+            charactersList.append(CharacterDomainModel(id: Int(characterDataBase.id),
+                                                       name: characterDataBase.name ?? "",
+                                                       status: StatusType(rawValue: characterDataBase.status ?? "") ?? .unknown,
+                                                       species: SpeciesType(rawValue: characterDataBase.species ?? "") ?? .unknown,
+                                                       gender: GendersType(rawValue: characterDataBase.gender ?? "") ?? .unknown,
+                                                       image: characterDataBase.image ?? ""))
+        }
+        self.tableView.reloadData()
     }
 }
 
@@ -79,17 +93,14 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
                                                       animated: true)
     }
 
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-           self.charactersList.remove(at: indexPath.row)
-           self.tableView.beginUpdates()
-           self.tableView.deleteRows(at: [indexPath], with: .automatic)
-           self.tableView.endUpdates()
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .normal, title: "Eliminar") { _, _, _ in
+            Database.shared.delete(characterID: indexPath.row)
+            self.charactersList.remove(at: indexPath.row)
         }
+        deleteAction.backgroundColor = .red
+
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
 }
 
