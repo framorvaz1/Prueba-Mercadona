@@ -17,6 +17,8 @@
 		A42F72362972C688001226C3 /* Prueba_MercadonaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F72352972C688001226C3 /* Prueba_MercadonaTests.swift */; };
 		A42F72402972C688001226C3 /* Prueba_MercadonaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F723F2972C688001226C3 /* Prueba_MercadonaUITests.swift */; };
 		A42F72422972C688001226C3 /* Prueba_MercadonaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F72412972C688001226C3 /* Prueba_MercadonaUITestsLaunchTests.swift */; };
+		A4DCF8A1297411090089F219 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DCF8A0297411090089F219 /* Characters.swift */; };
+		A4DCF8A42974147A0089F219 /* CharactersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DCF8A32974147A0089F219 /* CharactersAPI.swift */; };
 		A4F460CB29730E5400051029 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F460C929730E5400051029 /* CharacterCell.swift */; };
 		A4F460CF297311B500051029 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F460CE297311B500051029 /* UIViewExtension.swift */; };
 		A4F460D229731DD800051029 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F460D129731DD800051029 /* DetailViewController.swift */; };
@@ -57,6 +59,8 @@
 		A42F723B2972C688001226C3 /* Prueba MercadonaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Prueba MercadonaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A42F723F2972C688001226C3 /* Prueba_MercadonaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prueba_MercadonaUITests.swift; sourceTree = "<group>"; };
 		A42F72412972C688001226C3 /* Prueba_MercadonaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prueba_MercadonaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A4DCF8A0297411090089F219 /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
+		A4DCF8A32974147A0089F219 /* CharactersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersAPI.swift; sourceTree = "<group>"; };
 		A4F460C929730E5400051029 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
 		A4F460CE297311B500051029 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		A4F460D129731DD800051029 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 		A482A5462972CF22002E6154 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				A4DCF8A2297413FC0089F219 /* API */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 		A482A5472972CF3D002E6154 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				A4DCF89F297410EC0089F219 /* Entities */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -215,6 +221,22 @@
 				A42F72212972C687001226C3 /* Main.storyboard */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		A4DCF89F297410EC0089F219 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				A4DCF8A0297411090089F219 /* Characters.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		A4DCF8A2297413FC0089F219 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A4DCF8A32974147A0089F219 /* CharactersAPI.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		A4F460C829730E1800051029 /* Cell */ = {
@@ -378,6 +400,7 @@
 			files = (
 				A4F460CF297311B500051029 /* UIViewExtension.swift in Sources */,
 				A4F460D829732D0200051029 /* UITextFieldExtension.swift in Sources */,
+				A4DCF8A42974147A0089F219 /* CharactersAPI.swift in Sources */,
 				A42F72202972C687001226C3 /* MainViewController.swift in Sources */,
 				A42F72262972C687001226C3 /* Prueba_Mercadona.xcdatamodeld in Sources */,
 				A42F721C2972C687001226C3 /* AppDelegate.swift in Sources */,
@@ -385,6 +408,7 @@
 				A4F460CB29730E5400051029 /* CharacterCell.swift in Sources */,
 				A42F721E2972C687001226C3 /* SceneDelegate.swift in Sources */,
 				A4F460D229731DD800051029 /* DetailViewController.swift in Sources */,
+				A4DCF8A1297411090089F219 /* Characters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
